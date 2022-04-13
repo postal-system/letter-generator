@@ -7,6 +7,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 @Component
+@Profile("!test")
 @RequiredArgsConstructor
 public class LetterSenderScheduler {
     private final LetterGenerator letterGenerator;
