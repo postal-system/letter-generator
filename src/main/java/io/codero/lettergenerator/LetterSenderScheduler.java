@@ -13,7 +13,7 @@ public class LetterSenderScheduler {
     private final LetterGenerator letterGenerator;
     private final LetterService letterService;
 
-    @Scheduled(fixedDelay = 1_000)
+    @Scheduled(fixedDelayString = "${spring.scheduler.fixed-delay}")
     public void post() {
         letterService.send(letterGenerator.generateLetter());
     }

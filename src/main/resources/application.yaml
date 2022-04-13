@@ -2,3 +2,5 @@ spring:
   kafka:
     bootstrap-servers: "localhost:9092"
     topic: "letter"
+  scheduler:
+    fixed-delay: 6000
